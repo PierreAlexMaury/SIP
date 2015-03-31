@@ -1,0 +1,368 @@
+html
+{
+    height:100%;
+}
+
+
+#titre1
+{
+    margin-left:5px;
+    margin-right:5px;
+    text-align:center;
+    border-radius:10px;
+    border:1px black solid;
+    box-shadow:5px 5px 5px black;
+    background-color:rgb(56,123,154);
+    color:rgb(177,224,233);
+    text-shadow: 0px 2px 0px rgba( 0, 0, 0, 0.6);
+}
+
+h3
+{
+    font-size:21px;
+}
+
+h1,h2,h3,.bouton
+{
+    font-family:'HelveticaNeue','Arial Rounded MT Bold', Verdana;
+    color:rgb(177,224,233);
+}
+
+.home
+{
+    text-align:justify;
+}
+
+#titre1 a
+{
+    text-decoration:none;
+}
+
+#menu, #section1
+{
+    vertical-align: top;
+}
+
+#menu
+{
+    margin-left:5px;
+    float:left;
+    font-family:'HelveticaNeue','Arial Rounded MT Bold', Verdana;
+    background-color:rgb(56,123,154);
+    border-radius:10px;
+    box-shadow:5px 5px 5px black;
+    border:1px black solid;
+    color:white;
+    width:200px;
+    max-height:1000em;
+    padding-bottom:5px;
+}
+
+#menu ul li{
+    border-radius:10px;
+    padding-right:10px;
+    
+}
+
+#menu a, ul/*selectionne les balises a dans le nav*/
+{
+    
+    text-decoration:none;
+    list-style:none;
+    padding-left:10px;
+    color:rgb(177,224,233);
+    text-shadow: 0px 2px 0px rgba( 0, 0, 0, 0.6);
+}
+
+.sub_nav
+{
+    max-height:0px;
+    font-size:13px;
+    overflow: hidden;
+    transition: all .5s;
+    background-color:rgb(3,50,72);
+}
+
+.sub_sub_nav
+{
+    max-height:0px;
+    padding-left:7px;
+    font-size:11px;
+    overflow: hidden;
+    transition: all .6s;
+    background-color:rgb(3,50,72);
+}
+
+
+
+#menu li:hover .sub_nav {
+    max-height: 15em;
+}
+
+#menu li li:hover .sub_sub_nav {
+    max-height: 12em;
+}
+
+p
+{
+    font-family:'HelveticaNeue','Arial Rounded MT Bold', Verdana;
+}
+
+#menu a:hover
+{
+    color:rgb(130,0,25);
+    text-decoration:underline;
+    
+}
+
+#menu ul ul a:hover, #menu ul ul ul a:hover
+{
+    color:white;
+    text-decoration:underline;
+}
+
+#section1
+{
+    margin-left:225px;
+    margin-right:5px;
+    padding-bottom:50px;
+
+}
+
+#section1 article a
+{
+    text-decoration:none;
+    color:white;
+}
+
+#section1 article a:hover
+{
+    color:rgb(130,0,25);
+    text-decoration:underline;
+}
+
+#titresec
+{
+    display:inline;
+    border: 2px double;
+    padding:3px;
+    text-shadow: 0px 2px 0px rgba( 0, 0, 0, 0.7);
+}
+
+article
+{
+    text-align:justify;
+    padding-right:20px;
+}
+
+article h3
+{
+    text-shadow: 0px 2px 0px rgba( 0, 0, 0, 0.7);
+    font-style:italic;
+}
+
+#bib
+{
+    text-align:left;
+}
+
+.boutonD
+{
+    
+    text-align:center;
+    text-decoration:none;
+    display: inline-block;
+    float:right;
+    padding:3px 10px 3px 10px;
+    margin:8px 8px 8px 0px ;
+    border-radius:10px;
+    font-size: 15px;
+    font-family:'HelveticaNeue','Arial Rounded MT Bold', Verdana;
+    width:auto;
+    color:black;
+    box-shadow: 0px 0px 1px rgba( 0, 0, 0, 0.3), 0px -1px 0px rgba(255,255,255,0.1);
+    text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+}
+
+.boutonG
+{
+    text-align:center;
+    text-decoration:none;
+    display: inline-block;
+    float:left;
+    padding:3px 10px 3px 10px;
+    margin:8px 8px 8px 0px ;
+    border-radius:10px;
+    font-size: 15px;
+    font-family:'HelveticaNeue','Arial Rounded MT Bold', Verdana;
+    width:auto;
+    color:black;
+    box-shadow: 0px 0px 1px rgba( 0, 0, 0, 0.3), 0px -1px 0px rgba(255,255,255,0.1);
+    text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+}
+
+
+.Top
+{
+    text-align:center;
+    text-decoration:none;
+    display: inline-block;
+    float:left;
+    padding:3px 3px 3px 3px;
+    margin:8px 8px 8px 0px ;
+    border-radius:10px;
+    font-size: 15px;
+    font-family:'HelveticaNeue','Arial Rounded MT Bold', Verdana;
+    width:80px;
+    color:black;
+    box-shadow: 0px 0px 1px rgba( 0, 0, 0, 0.3), 0px -1px 0px rgba(255,255,255,0.1);
+    text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+    position: absolute;
+    left: 5px;
+    bottom:15px;
+}
+
+.boutonG, .boutonD, .boutonG:active, .boutonG:active, .Top, .Top:active  {
+    background: linear-gradient( rgb(56,123,154), rgb(3,50,72));
+}
+
+.boutonG:hover, .boutonD:hover, .Top:hover {
+    background: linear-gradient( rgb(177,224,233), rgb(56,123,154));
+}
+
+.boutonG:active, .boutonD:active, .Top:active
+{
+    box-shadow: 1px 1px 10px black inset, 0px 1px 0px rgba( 255, 255, 255, 0.4);
+}
+
+.fleche_droite
+{
+    margin-right:-9px;
+    border:7px solid transparent;
+    border-left:7px solid black;
+    display:inline-block;
+    
+}
+
+.fleche_gauche
+{
+    margin-left:-9px;
+    border:7px solid transparent;
+    border-right:7px solid black;
+    display:inline-block;
+    
+}
+
+.fleche_droite_top
+{
+    margin-right:-9px;
+    border:6px solid transparent;
+    border-left:6px solid black;
+    display:inline-block;
+    
+}
+
+.fleche_gauche_top
+{
+    margin-left:-9px;
+    border:6px solid transparent;
+    border-right:6px solid black;
+    display:inline-block;
+    
+}
+
+footer
+{
+
+    font-size:0.8em;
+    position:absolute;
+    bottom:0px;
+    left:40%;
+
+}
+
+.about
+{
+   font-size:17px;
+}
+
+.ufrj_about, .img_SIP
+{
+    display: block;
+    margin-left: 26%;
+    margin-right: auto;
+}
+
+article div div
+{
+    padding-left:40px;
+    text-align:left;
+    
+}
+
+article div div p
+{
+    padding-left:60px;
+}
+
+.list_indent
+{
+    margin:0px;
+}
+
+lign
+{
+    text-decoration:underline;
+    color:white;
+}
+
+i
+{
+    text-decoration:underline;
+}
+
+ibis
+{
+    text-decoration:none;
+    font-style : italic;
+}
+
+.img_SIP
+{
+    display:block;
+    margin-left:18%;
+}
+
+.img_IPPI
+{
+    display:block;
+    
+}
+
+
+figcaption
+{
+    text-decoration:none;
+    color:black;
+    font-family:'HelveticaNeue','Arial Rounded MT Bold', Verdana;
+    font-size:0.9em;
+    font-style:italic;
+    padding-left:10px;
+}
+
+.ques
+{
+    color:white;
+}
+
+body
+{
+    box-sizing: border-box;
+    min-height:100%;
+    padding-bottom:1em;
+    position:relative;
+    font-family:'HelveticaNeue','Arial Rounded MT Bold', Verdana;
+    background: linear-gradient(rgb(3,50,72),rgb(56,123,154)) fixed;
+    color:rgb(155,197,204);
+    
+}

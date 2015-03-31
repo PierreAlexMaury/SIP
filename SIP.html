@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Ceci est un commentaire -->
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="Style.css" />
+        <title>SIP</title>
+        <link rel="icon" type="image/png" href="Images/fis.jpg" />
+    </head>
+    
+    <body>
+        
+        <header>
+            <h1 id="titre1">Session Initiation Protocol</h1>
+            
+            <nav id="menu">
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="SIP.html">SIP</a>
+                        <ul>
+                            <li class="sub_nav"><a href="SIP.html#context">Context</a></li>
+                            <li class="sub_nav"><a href="SIP.html#terminology">Terminology</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Ope.html">Operation</a>
+                        <ul>
+                            <li class="sub_nav"><a href="Ope.html#elem">Facets of SIP</a></li>
+                            <li class="sub_nav"><a href="Ope.html#comm">Commands of SIP</a></li>
+                            <li class="sub_nav"><a href="Ope.html#exa">Examples of operation</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Apps.html">SIP Applications</a>
+                        <ul>
+                            <li class="sub_nav"><a href="Apps.html#oper">SIP Operators</a></li>
+                            <li class="sub_nav"><a href="Apps.html#soft">SIP Softwares</a></li>
+                            <li class="sub_nav"><a href="Apps.html#phon">SIP Phones</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Annex.html">Annex</a>
+                        <ul>
+                            <li class="sub_nav"><a href="Annex.html#rfc">SIP RFCs</a></li>
+                            <li class="sub_nav"><a href="Annex.html#code">Response codes SIP</a>
+                                <ul>
+                                    <li class="sub_sub_nav"><a href="Annex.html#1xx">1xx - Provisional</a></li>
+                                    <li class="sub_sub_nav"><a href="Annex.html#2xx">2xx - Successful</a></li>
+                                    <li class="sub_sub_nav"><a href="Annex.html#3xx">3xx - Redirection</a></li>
+                                    <li class="sub_sub_nav"><a href="Annex.html#4xx">4xx - Request Failure</a></li>
+                                    <li class="sub_sub_nav"><a href="Annex.html#5xx">5xx - Server Failure</a></li>
+                                    <li class="sub_sub_nav"><a href="Annex.html#6xx">6xx - Global Failures</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="Ques.html">Questions</a></li>
+                    <li><a href="Bib.html">Bibliography</a></li>
+                    <li><a href="About.html">About</a></li>
+                </ul>
+                <div id = "img">
+                    <img src = "Images/poli.jpg" align = "left" WIDTH=190  HEIGHT=62 HSPACE= 5 BORDER=1 title="UFRJ">
+                        </div>
+            </nav>
+        </header>
+            
+            <section id="section1">
+                <h2 id="titresec">SIP</h2>
+                <article>
+                    <h3 id="context"> Context </h3>
+                    <div><p>SIP is now the most used protocol for Internet telephony or Voice over IP (VoIP). It also can be used for instant messaging, virtual reality, video teleconferencing, or video games. These multimedia content is exchanged between session participants using an appropriate transport protocol. In many cases, the transport protocol to use is the Real-Time Transport Protocol (RTP).</p>
+                    
+                    <p>SIP has gradually replaced the H.323 protocol, which is used for call signaling and control, multimedia transport and control, and bandwidth control for point-to-point and multipoint conferences.</p>
+                    
+                    
+                    <p>It is now the industry standard for the telecom and multimedia communications. Half of the total number of users of a telecom service has used or will use at least once SIP-based services. So the spending to build network infrastructure could reach 10 billion euros.</p>
+                    
+                    <p>The main advantage of the opening of a free SIP account or SIP trunking with a VoIP provider is the fact that it is possible to make free calls to all other users on other SIP providers in the world by simply composing their SIP addresses, provided that the SIP network operator is opened.</p>
+                    
+                    <p>The only major player not using the SIP protocol is the "Skype" service, which deprives him of being compatible with a lot of  hardware, software and market SIP applications.</p>
+                    </div>
+                </article>
+                <article>
+                    <h3 id ="terminology"> Terminology </h3>
+                    <div> A system using SIP can be viewed as consisting of components defined on two dimensions [6]: client/server and individual network elements. Client and server are defined in the RFC 3261 by:<br/>
+                        <p>• <lign>Client</lign>: A client is any network element that sends SIP requests and receives SIP responses. Clients may or may not interact directly with a human user. User agent clients and proxies are clients.</p>
+                        <div>
+                            Then in a standard SIP configuration we find individual elements, in the category of client we have the <i>Agent Equipement (AE)</i> which represents:<br/>
+                            <p class="list_indent">• <lign>User Agent</lign>: The user agent resides in every SIP end station[6]. It is a SIP network terminal (SIP telephones, or gateway to other networks), it can be: </p><br/>
+                            <div>
+                            <p class="list_indent">» <lign>User Agent Client (UAC)</lign>: Client in the terminal that initiates SIP signalling</p>
+                            <p class="list_indent">» <lign>User Agent Server (UAS)</lign>: Receives SIP requests and generates a response that accepts, rejects, or redirects the request.</p>
+                            </div>
+                            <br/>In SIP, as in HTTP, the user agent may identify itself using a message header field 'User-Agent', containing a text description of the software/hardware/product involved. The User-Agent field is sent in request messages, which means that the receiving SIP server can see this information. We can also note that a single user agent may function as an UAC and an UAS.
+                        <br/><br/><br/><br/></div>
+                        <p>• <lign>Server</lign>: A server is a network element that receives requests in order to service them and sends back responses to those requests. Examples of servers are proxies, user agent servers, redirect servers, and registrars.</p>
+                        <div>
+                            <i>Proxy server (PS):</i> It is an intermediary entity that acts as both a server and a client for the purpose of making requests on behalf of other clients.<br>
+                            A proxy server primarily plays the role of routing, meaning that its job is to ensure that a request which is received for a connexion is sent to another entity closer to the targeted user if this particular station is not in its administration.<br/> This request is sent by the client because the exact address of the recipient is not known in advance. Then this request can be forward to another proxy server or the recipient itself.<br/><br/>
+                        </div>
+                        <div>
+                            <i>Redirect Server (RS):</i> It is used during session initiation to determine the address of the called device.                 This server accepts SIP requests, translates the address contained in the SIP request in zero or more network addresses if it has been recognized or not and finally returns them to the client to contact an alternate Universal Resource Identifier (URI) which is a generic identifier used to name any resource on the Internet.<br/><br/>
+                        </div>
+                        <div>
+                            <i>Location Server (LS):</i> It is used by a SIP redirect or proxy server to obtain information about a callee's possible location(s) after have received registration requests from the UA. This function is provided by the location service composed of a database or a text file containing the list of UA, their rights and their password.<br/><br/>
+                        </div>
+                        <div>
+                            <i>Registrar (RG):</i> To detect the location of an user in a network (it is one of a prime works of a server) the user have to register his location to a Registrar server and refreshes from time to time his location by sending a REGISTER request to a Registrar server.<br/>
+                            
+                                So a Registrar server is a SIP endpoint that accepts REGISTER requests and places the information it receives in those requests into a location service for the domain it handles. The location service links one or more IP addresses to the SIP URI of the registering agent. The URI uses the SIP scheme, although other protocol schemes are possible. More than one user agent can register at the same URI, with the result that all registered user agents receive the calls to the URI.<br/><br/>
+                        </div>
+                        <p> All these server sections (Location,Proxy,Redirect...) are often on a single physical machine: a proxy server, which is responsible for client database maintenance, connection establishing, maintenance and termination, and call directing.</p>
+                    </div>
+                    
+                    <div class = "img_SIP">
+                        <img src = "Images/session_initiation_1.gif">
+                            <figcaption>-SIP Components, Source: [6]-</figcaption>
+                    </div>
+                    
+                </article>
+                
+                <br/>
+                <a href="Home.html" class="boutonG"><div class="fleche_gauche"></div> Home</a>
+                <a href="Ope.html" class="boutonD">Operation <div class="fleche_droite"></div></a>
+                <br/>
+                
+            </section>
+            
+            <a href="#" class="Top"><div class="fleche_droite_top"></div> Top <div class="fleche_gauche_top"></div></a>
+            
+            <footer>
+                <p>Copyright Pierre-Alexandre Maury - all rights reserved</p>
+            </footer>
+    </body>
+</html>

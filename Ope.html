@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Ceci est un commentaire -->
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="Style.css" />
+        <title>Operation</title>
+        <link rel="icon" type="image/png" href="Images/fis.jpg" />
+    </head>
+    
+    <body>
+        
+        <header>
+            <h1 id="titre1">Session Initiation Protocol</h1>
+            <nav id="menu">
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="SIP.html">SIP</a>
+                        <ul>
+                            <li class="sub_nav"><a href="SIP.html#context">Context</a></li>
+                            <li class="sub_nav"><a href="SIP.html#terminology">Terminology</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Ope.html">Operation</a>
+                        <ul>
+                            <li class="sub_nav"><a href="Ope.html#elem">Facets of SIP</a></li>
+                            <li class="sub_nav"><a href="Ope.html#comm">Commands of SIP</a></li>
+                            <li class="sub_nav"><a href="Ope.html#exa">Examples of operation</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Apps.html">SIP Applications</a>
+                        <ul>
+                            <li class="sub_nav"><a href="Apps.html#oper">SIP Operators</a></li>
+                            <li class="sub_nav"><a href="Apps.html#soft">SIP Softwares</a></li>
+                            <li class="sub_nav"><a href="Apps.html#phon">SIP Phones</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Annex.html">Annex</a>
+                        <ul>
+                            <li class="sub_nav"><a href="Annex.html#rfc">SIP RFCs</a></li>
+                            <li class="sub_nav"><a href="Annex.html#code">Response codes SIP</a>
+                                <ul>
+                                    <li class="sub_sub_nav"><a href="Annex.html#1xx">1xx - Provisional</a></li>
+                                    <li class="sub_sub_nav"><a href="Annex.html#2xx">2xx - Successful</a></li>
+                                    <li class="sub_sub_nav"><a href="Annex.html#3xx">3xx - Redirection</a></li>
+                                    <li class="sub_sub_nav"><a href="Annex.html#4xx">4xx - Request Failure</a></li>
+                                    <li class="sub_sub_nav"><a href="Annex.html#5xx">5xx - Server Failure</a></li>
+                                    <li class="sub_sub_nav"><a href="Annex.html#6xx">6xx - Global Failures</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="Ques.html">Questions</a></li>
+                    <li><a href="Bib.html">Bibliography</a></li>
+                    <li><a href="About.html">About</a></li>
+                </ul>
+                <div id = "img">
+                    <img src = "Images/poli.jpg" align = "left" WIDTH=190  HEIGHT=62 HSPACE= 5 BORDER=1 title="UFRJ">
+                        </div>
+            </nav>
+        </header>
+        
+        <section id="section1">
+            <h2 id="titresec">Operation</h2>
+            <article>
+                <h3 id="elem"> Facets of SIP </h3>
+                <div>
+                    <p>SIP can invite users to
+                    already existing multimedia sessions, such as multicast conferences.  Media can
+                    be added to (and removed from) an existing session. For these specifications SIP supports five facets of establishing and terminating multimedia communications: </p>
+                    <div>
+                        • <lign>User location</lign> : Users can move to other locations and access their telephony or other application features from remote locations. This is possible by the determination of the end system to be used for communication.<br/><br/>
+                        • <lign>User availability</lign> : This step involves determination of the willingness of the called
+                        party to engage in communications.<br/><br/>
+                        • <lign>User capabilities</lign> : In this step, the media and media parameters to be used are determined.<br/><br/>
+                        • <lign>Session setup</lign> : This step establishes the session parameter for both ends of the communications, more specifically, where one person calls and the other answers. It is the "ringing" step.<br/><br/>
+                        • <lign>Session management</lign> : This step includes transfer and termination of sessions, modifying session parameters, and invoking services.<br/><br/>
+                    </div>
+                    So SIP, in order to build a complete multimedia architecture, have to be used with other IETF protocols. Typically, these
+                    architectures will include protocols:
+                    <div><br/>• <i>The Real-time Transport Protocol (RTP)</i> for transporting real-time data and
+                    providing QoS feedback.
+                    </div><br/>
+                    <div>
+                    • <i>The Real-Time Streaming Protocol (RTSP)</i> for controlling delivery of streaming media.
+                    </div><br/>
+                    <div>
+                    • <i>The Media Gateway Control Protocol (MEGACO)</i> for controlling
+                    gateways to the Public Switched Telephone Network (PSTN)
+                    </div><br/>
+                    <div>
+                    • <i>The Session Description Protocol (SDP)</i> for describing multimedia sessions.
+                    However, the basic functionality and operation of SIP does
+                    not depend on any of these protocols.
+                    </div><br/>
+                    
+                    But SIP does not provide some elements:
+                    <div><br/>SIP does not provide services. Rather, SIP provides primitives that
+                        can be used to implement different services. In fact a single primitive is
+                        typically used to provide several different services.
+                    </div><br/>
+                    <div>
+                    SIP does not offer conference control services such as floor control
+                    or voting and does not prescribe how a conference is to be managed.
+                    </div><br/>
+                    
+                    More generally, the SIP operation is based on the User Datagram Protocol (UDP) for performance reasons, and provides its own reliability mechanisms, but SIP can also use TCP. If a secure, encrypted transport mechanism is desired, SIP operation can also be based on the Transport Layer Security (TLS) protocol.<br/><br/>
+                    
+                    Now in order to invite one or more participants to a session, SIP is associated to the SDP, which the role is to contain information about what media encodings (for example, voice, video) the parties can and will use. SDP messages are encapsulated into body of the SIP message. After this information is exchanged and acknowledged, all participants are aware of the IP addresses of the participants, available transmission capacity, and media type. Then data transmission begins, using an appropriate transport protocol. Typically, the RTP is used. Throughout the session, participants can make changes to session parameters, such as new media types or new parties to the session, using SIP messages.<br/><br/>
+                    
+                    Another important fact about SIP operation is the using of <i>Universal Resource Indicators</i>. A resource within a SIP configuration is identified by a URI. SIP URIs have a format based on e-mail address formats, namely user@domain. There are two common schemes. An ordinary SIP URI is of the form: <i>sip:bob@biloxi.com</i>. The URI may also include a password, port number, and related parameters. If secure transmission is required, "sip:" is replaced by "sips:." In the latter case, SIP messages are transported over TLS.
+                </div>
+            </article>
+            <article>
+                <h3 id="comm"> Commands of SIP </h3>
+                <div>
+                    <p>The different commands of SIP are used during client-server exchanges. We can employe the term "request". Here are the details of each messages [2][3][6]: </p>
+                    <div>
+                        • <i>Messages defined by RFC 3261</i> : <br/>
+                        
+                            <p>» <lign>INVITE</lign> : Used to establish a media session between user agents. The message body describes the session. If the answer to the invitation is favorable, the guest must also specify the media it supports in its message body. </p>
+                            
+                            <p>» <lign>ACK</lign> : Confirms reliable message exchanges. It confirms that the client has received a final response to an INVITE request.</p>
+                            
+                            <p>» <lign>BYE</lign> : Terminates a session between two users in a conference. A BYE message can be sent by the caller or the callee.</p>
+                            
+                            <p>» <lign>CANCEL</lign> : Terminates a pending request, but does not undo a completed call. It is used if a client sends an INVITE and then changes its decision to call the recipient.</p>
+                            
+                            <p>» <lign>REGISTER</lign> : Used by a user agent to notify a SIP configuration of its current IP address and the URLs for which it would like to receive calls.</p>
+                            
+                            <p>» <lign>OPTIONS</lign> : Solicits information about the capabilities of the callee, but does not set up a call</p>
+                            
+                        • <i>Messages defined by over RFCs [3]</i> : <br/>
+                        
+                            <p>» <lign>INFO</lign> (Defined by RFC 2976) : Informations session without changing the session state</p>
+                            
+                            <p>» <lign>MESSAGE</lign> (Defined by RFC 3428) : Allows sending instant messages.</p>
+                            
+                            <p>» <lign>NOTIFY</lign> (Defined by RFC 3265) : Sends event notifications.</p>
+                            
+                            <p>» <lign>PRACK</lign> (Defined by RFC 3262) : Implements the special mechanism for securing provisional responses.</p>
+                            
+                            <p>» <lign>REFER</lign> (Defined by RFC 3515) : Enables call transfer.</p>
+                            
+                            <p>» <lign>SUSCRIBE</lign> (Defined by RFC 3265) : Requests notification of events.</p>
+                            
+                            <p>» <lign>UPDATE</lign> (Defined by RFC 3311) : Modifies the state of a session without changing the state of the dialog.</p>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h3 id="exa"> Examples of operation </h3>
+                <div>
+                    <p>We are going to present two different examples of operation. First a User Agent has to make a registration to his registrar: </p>
+                </div>
+                
+                <div class = "img_SIP">
+                    <img src = "Images/UA.png">
+                        <figcaption>-Registration and notification, Source: [6]-</figcaption>
+                </div>
+                
+                <div>
+                    <p>In this example the user Bob has to sign in. In order to do that he sends a <lign>REGISTER</lign> message to the proxy server in its domain (1). Then the proxy updates the database at the location service with this registration (2). The update is confirmed to the proxy and to Bob(3,4). <lign>The PINT*</lign> (<i>Public Switched Telephone Network [PSTN]-Internet Networking</i>) functionality learns of Bob's new status from the location server and sends a NOTIFY message containing Bob's new status (5), which is forwarded to Alice (6, 7). The UAC of Alice acknowledges receipt of the notification (8, 9, 10).</p>
+                    
+                        <p>* A PINT server acts as a gateway between an IP network from which comes a request to place a telephone call and a telephone network that executes the call by connecting to the destination telephone. The PINT functionality is implemented in the location service.</p>
+                </div>
+                </br></br>
+                <div>
+                    <p>Then we have an example of a call between two SIP phones via a SIP proxy:</p>
+                </div>
+                
+                <div class = "img_SIP">
+                    <img src = "Images/call.png">
+                        <figcaption>-Call between two SIP phones, Source: [6]-</figcaption>
+                </div>
+                
+                <div>
+                    <p>A call begins by the sending of an <lign>INVITE</lign> message to the proxy server (Here realized by Alice) that indicates its desire to invite Bob's UAS into a session (1). The server acknowledges the request (2). Although Bob's UAS is identified by its URI, the outbound proxy server needs to account for the possibility that Bob is not currently available or that Bob has moved. The outbound proxy server should forward the INVITE request to the proxy server that is responsible for the domain biloxi.com. So The outbound proxy consults a local <lign>DNS</lign> server to obtain the IP address of the biloxi.com proxy server (3), by asking for the DNS server resource record that contains information on the proxy server for biloxi.com.<p>
+                    
+                    <p>The DNS server responds (4) with the IP address of the biloxi.com proxy server (the inbound server). The proxy server of Alice can now forward the INVITE message to the inbound proxy server (5), which acknowledges the message (6). The inbound proxy server now consults a location server to determine the location of Bob (7), and it responds with the location of Bob, indicating that Bob is signed in, and therefore available for SIP messages (8).</p>
+                    
+                    <p>Now the proxy server can send the INVITE message to Bob (9). A ringing response is sent from Bob back to Alice (10, 11, 12) while the UAS at Bob is alerting the local media application. When the media application accepts the call, Bob's UAS sends back an OK response to Alice (13, 14, 15).</p>
+                    
+                    <p>Finally, Alice's UAC sends an acknowledgement message to Bob's UAS to confirm the reception of the final response (16). The ACK is sent directly from Alice to Bob, without pass between the two proxies. This happens because the endpoints have learned each other's address from the <lign>INVITE exchange</lign> with a <lign>200 (ok)</lign> conclusion, which was not known when the initial INVITE was sent. The media session has now begun, and Alice and Bob can exchange data over one or more RTP connections.</p>
+                </div>
+                
+            </article>
+
+            <br/>
+            <a href="SIP.html" class="boutonG"><div class="fleche_gauche"></div> SIP</a>
+            <a href="Apps.html" class="boutonD">SIP Applications <div class="fleche_droite"></div></a>
+            <br/>
+
+        </section>
+        
+        <a href="#" class="Top"><div class="fleche_droite_top"></div> Top <div class="fleche_gauche_top"></div></a>
+        
+        <footer>
+            <p>Copyright Pierre-Alexandre Maury - all rights reserved</p>
+        </footer>
+    </body>
+</html>
